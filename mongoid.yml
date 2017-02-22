@@ -2,6 +2,7 @@
 development:
   clients:
     default:
+        database: <%= ENV['DATABASE'] %>
         hosts: <%= ENV['MONGODB_URI'] %>
         options:
           skip_version_check: true
