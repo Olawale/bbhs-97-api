@@ -6,7 +6,7 @@ file = File.open("./bbhs_97.json")
 members = JSON.parse(File.read(file))
 
 
-conn = Faraday.new(:url => 'http://localhost:4567') do |faraday|
+conn = Faraday.new(:url => ENV['BASE_URL']) do |faraday|
   faraday.request  :json
   faraday.response :json, content_type: /\bjson$/
   faraday.adapter  Faraday.default_adapter
@@ -26,5 +26,3 @@ end
 #   req.headers['Content-Type'] = 'application/json'
 #   req.body = members.first.to_json
 # end
-
-# https://bbhs-97-api.herokuapp.com
