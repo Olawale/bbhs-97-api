@@ -4,7 +4,7 @@ require 'mongoid'
 require 'pry'
 
 # DB setup
-Mongoid.load! "mongoid.yml"
+Mongoid.load!("mongoid.yml", :development)
 
 class Member
   include Mongoid::Document
