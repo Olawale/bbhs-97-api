@@ -1,14 +1,18 @@
-development:
-    clients:
-        default:
-            database: bbhs_97
-            hosts:
-                - localhost:27017
 
-production:
-  sessions:
+development:
+  clients:
     default:
-      uri: <%= ENV['MONGODB_URI'] %>
-      options:
-        skip_version_check: true
-        safe: true
+        hosts: <%= ENV['MONGODB_URI'] %>
+        options:
+          skip_version_check: true
+          safe: true
+
+#production:
+#  clients:
+#    default:
+#        hosts: <%= ENV['MONGODB_URI'] %>
+#        options:
+#          skip_version_check: true
+#          safe: true
+
+
