@@ -65,6 +65,7 @@ namespace '/api/v1' do
 
   before do
     content_type 'application/json'
+    eror 401 unless params[:key] == ENV['API_KEY']
   end
 
   helpers do
