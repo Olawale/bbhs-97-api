@@ -20,6 +20,8 @@ class Member
   field :day_of_birth, type: String
   field :month_of_birth, type: String
   field :email_address, type: String
+  field :excoId, type: Boolean
+  field :role, type: String
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -54,7 +56,9 @@ class MemberSerializer
         day_of_birth:@member.day_of_birth,
         month_of_birth:@member.month_of_birth,
         image:@member.image,
-        email_address:@member.email_address
+        email_address:@member.email_address,
+        excoId:@member.excoId,
+        role:@member.role
     }
     data[:errors] = @member.errors if @member.errors.any?
     data
