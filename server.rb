@@ -32,10 +32,10 @@ class Member
   index({last_name: 'text'})
   index({index_name: 'text'})
 
-  scope :first_name, -> (first_name) { where(first_name: first_name.downcase)}
-  scope :last_name, -> (last_name) { where(last_name: last_name.downcase)}
-  scope :nick_name, -> (nick_name) { where(nick_name: nick_name.downcase)}
-  scope :residence_country, -> (residence_country) { where(residence_country: residence_country.downcase)}
+  scope :first_name, -> (first_name) { where(first_name: first_name)}
+  scope :last_name, -> (last_name) { where(last_name: last_name)}
+  scope :nick_name, -> (nick_name) { where(nick_name: nick_name)}
+  scope :residence_country, -> (residence_country) { where(residence_country: residence_country)}
 end
 
 class MemberSerializer
