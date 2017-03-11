@@ -127,7 +127,7 @@ namespace '/api/v1' do
     serialize(member)
   end
 
-  delete '/members/id' do |id|
+  delete '/members/:id' do |id|
     # member = Member.where(id: id).first
     member.destroy if member
     status 204
