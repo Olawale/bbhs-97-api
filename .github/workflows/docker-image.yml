@@ -1,10 +1,12 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Django App'
+        required: false
+        default: 'No source specified'
 
 jobs:
 
