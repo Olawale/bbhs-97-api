@@ -1,6 +1,9 @@
 name: Docker Image CI
 
-on: [repository_dispatch]
+on: 
+  repository_dispatch:
+    types:
+      - end-to-end
 
 jobs:
 
